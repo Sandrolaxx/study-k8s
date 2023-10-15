@@ -172,3 +172,24 @@ Comandos úteis:
 MiniKube:
 alias kubectl="minikube kubectl --" ---> setar o comando do minikube para um alias
 minikube kubectl -- get po -A ---> Acessar nosso novo cluster
+
+--
+
+Keycloak:
+
+#Instalação do Helm
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 
+chmod 700 get_helm.sh
+./get_helm.sh
+
+helm repo add codecentric https://codecentric.github.io/helm-charts
+helm show values   codecentric/keycloak   codecentric.yaml
+helm install keycloak codecentric/keycloak --values codecentric.yaml 
+
+https://www.youtube.com/watch?v=SJrvqQF6qA0
+
+--
+
+Kong:
+
+https://www.youtube.com/watch?v=V2OxLYJnb64
